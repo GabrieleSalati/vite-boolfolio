@@ -1,21 +1,21 @@
 <script>
+
+import ProjectCard from './ProjectCard.vue';
+
 export default {
     props: {
         projects: Array,
+    },
+
+    components: {
+        ProjectCard,
     },
 };
 </script>
 
 <template>
-    <div class="card" v-for="project in projects">
-        <img src="{{ project.image }}" class="card-img-top" alt="Picture">
-        <div class="card-body">
-            <h5 class="card-title">{{ project.title }}</h5>
-            <h6>{{ project.technology.label }}</h6>
-            <h6>{{ project.types.label }}</h6>
-            <p class="card-text">{{ project.description }}</p>
-            <a href="#" class="btn btn-primary">Details</a>
-        </div>
+    <div class="container">
+        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 </template>
 
