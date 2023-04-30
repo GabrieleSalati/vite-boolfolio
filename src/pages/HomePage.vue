@@ -11,7 +11,7 @@ export default {
     },
 
     components: {
-        ProjectsList: ProjectsList
+        ProjectsList
     },
 
     methods: {
@@ -28,6 +28,7 @@ export default {
 
 <template>
     <h1>{{ title }}</h1>
+    <ProjectsList :projects="projects" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -1,7 +1,5 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import HomePage from "./pages/homepage.vue";
-import ContactPage from "./pages/ContactPage.vue";
 
 export default {
   data() {
@@ -11,7 +9,7 @@ export default {
   },
 
   components: {
-    AppHeader, HomePage, ContactPage
+    AppHeader
   },
 
 };
@@ -20,9 +18,7 @@ export default {
 <template>
   <AppHeader />
   <h1>{{ title }}</h1>
-  <ProjectsList :projects="projects" />
-  <HomePage />
-  <ContactPage />
+  <router-view></router-view>
 </template>
 
 <style lang="scss" scoped></style>
