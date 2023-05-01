@@ -15,7 +15,9 @@ export default {
             <h6>{{ project.technology.label }}</h6>
             <!-- <h6>{{ project.types.labels }}</h6> -->
             <p class="card-text">{{ project.description }}</p>
-            <a href="#" class="btn btn-primary">Details</a>
+            <router-link class="btn btn-primary" :to="{
+                name: 'project-detail', params: { 'id': project.id }
+            }">Details</router-link>
         </div>
     </div>
 </template>
