@@ -1,10 +1,7 @@
 <script>
 
-import router from '../router';
-
 export default {
     name: "AppHeader",
-    components: { router }
 };
 </script>
 
